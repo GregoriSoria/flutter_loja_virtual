@@ -61,17 +61,15 @@ class HomeTab extends StatelessWidget {
                             doc.data["x"], doc.data["y"]);
                       },
                     ).toList(),
-                    children: snapshot.data.documents
-                        .map(
-                          (doc) {
-                            return FadeInImage.memoryNetwork(
-                              placeholder: kTransparentImage,
-                              image: doc.data["image"],
-                              fit: BoxFit.cover,
-                            );
-                          },
-                        )
-                        .toList(),
+                    children: snapshot.data.documents.map(
+                      (doc) {
+                        return FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: doc.data["image"],
+                          fit: BoxFit.cover,
+                        );
+                      },
+                    ).toList(),
                   );
               },
             ),
